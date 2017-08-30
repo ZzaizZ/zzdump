@@ -1,20 +1,64 @@
-@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+@import url('https://fonts.googleapis.com/css?family=Poppins|Roboto+Condensed');
 
-// colours
+/// переменные
+// цвета
 $light-gray: #c1c1c1;
 $soft-gray: #8c8c8c;
 $bg-gray: #FAFAFA;
 $dark-gray: #333;
 $light-green: #1ac2c4;
 
-// margins
+// отступы
 $left-ui-margin: 20px;
 $top-margin: 70px;
 
-//sizes
+// размеры
 $ui-width: 270px;
 $ui-height: 400px;
 $ui-ava-height: 250px;
+
+/// mixins
+// mixin для ссылок
+@mixin links-format($type) {
+
+	@if $type == def {
+		color: $light-green;
+		font-family: Roboto;
+		text-decoration: none;
+		font-weight: 500;
+		&:hover {			
+			text-decoration: none;
+			color: $dark-gray;
+		}
+		&:visited {
+			text-decoration: none;
+			color: $light-green;
+		}		
+		&:focus {			
+			text-decoration: none;
+			color: $light-green;
+		}
+	}
+	@if $type == title {
+		color: $dark-gray;
+		text-decoration: none;
+		font-weight: 500;
+		&:focus {			
+			text-decoration: none;
+			color: $dark-gray;
+		}
+		&:hover {			
+			text-decoration: none;
+			color: $dark-gray;
+		}
+		&:visited {
+			text-decoration: none;
+			color: $dark-gray;
+			border: 0;
+		}
+	}
+}
+
 
 #main {
 	background-color: $bg-gray;
@@ -24,6 +68,7 @@ $ui-ava-height: 250px;
 	box-shadow: 0 0 25px rgba(122,122,122,0.5);
 }
 
+// левый таб с инфой о владельце блога
 .user-info-fixed {	
 	width: $ui-width;
 	height: $ui-height;
@@ -58,12 +103,8 @@ $ui-ava-height: 250px;
 			color: #333333;
 		}
 
-		.fa-github:hover {
+		.fa-github:hover, .fa-vk:hover, .fa-telegram:hover {
 			text-shadow: 0px 2px 5px;
-		}
-
-		.fa-vk:hover {
-			text-shadow: 0px 2px 5px;	
 		}
 	}
 }
@@ -73,50 +114,30 @@ $ui-ava-height: 250px;
 	height: $ui-ava-height;
 }
 
+// главный таб со статьями
 .content {
 	height: 3000px;
 	width: 80%;
 	margin-left: $left-ui-margin + $ui-width + 15px;
 	margin-top: $top-margin;
 	margin-bottom: 50px;
-	padding: 10px 0px 0px 20px;
+	padding: 10px 20px 0px 20px;
 	background-color: white;
 	word-wrap: break-word;	
 }
 
-.post-title {	
+.post-title {
 	a {
-		color: $dark-gray;
-		text-decoration: none;
-		font-weight: 500;
-		&:hover {			
-			text-decoration: inherit;
-			color: $dark-gray;
-		}
-		&:visited {
-			text-decoration: inherit;
-			color: $dark-gray;
-		}
+		@include links-format(title);
 	}
+
 	h1 {
 		font-weight: bold;
 	}
 }
 
 .any-link {
-	color: $light-green;
-	text-decoration: none;
-	font-weight: 500;
-	&:visited {
-		color: $light-green;
-		text-decoration: none;
-		font-weight: 500;
-	}
-	&:hover {
-		color: $dark-gray;
-		text-decoration: none;
-		font-weight: 500;
-	}
+	@include links-format(def);
 }
 
 .post-details {
@@ -134,6 +155,11 @@ $ui-ava-height: 250px;
 	padding: 10px;
 	background-color: white;
 	word-wrap: break-word;
+
+	p {
+		text-align: center;
+		vertical-align: middle;
+	}
 }
 
 hr.dash {
@@ -150,19 +176,29 @@ hr.dash {
 
 .small-nav {
 	.collapsed-icon {
-		text-align: right;
+		float: right;
+		font-size: 25pt;
+		padding-top: 20px;
 	}
 
 	h3 {
 		display: inline-block;
+		font-family: Roboto;
 	}
 }
-.collapsed {
 
+.more {
+	font-size: 14pt;
+}
+
+.collapsed {
 	li {
 		display: inline;
-		margin-right: 10px;
-		padding: 5px;
+		padding-left: 20px;
+		float: right;
 	}
-	
+	a {
+		font-weight: bold;
+		font-size: 14pt;
+	}
 }
