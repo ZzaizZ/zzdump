@@ -1,0 +1,111 @@
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+#main {
+  background-color: #FAFAFA; }
+
+.tabs {
+  box-shadow: 0 0 25px rgba(122, 122, 122, 0.5); }
+
+.user-info-fixed {
+  width: 270px;
+  height: 400px;
+  position: fixed;
+  margin-left: 20px;
+  margin-top: 70px;
+  background-color: white; }
+  .user-info-fixed h4 {
+    text-align: center;
+    font-weight: bold; }
+  .user-info-fixed p {
+    text-align: center;
+    vertical-align: middle;
+    color: #c1c1c1; }
+  .user-info-fixed ul.user-social {
+    text-align: center;
+    margin: 0px;
+    padding: 4px; }
+  .user-info-fixed li {
+    display: inline;
+    margin-right: 10px;
+    padding: 5px; }
+    .user-info-fixed li .fa-github {
+      color: #333333; }
+    .user-info-fixed li .fa-github:hover {
+      text-shadow: 0px 2px 5px; }
+    .user-info-fixed li .fa-vk:hover {
+      text-shadow: 0px 2px 5px; }
+
+.user-ava {
+  width: 270px;
+  height: 250px; }
+
+.content {
+  height: 3000px;
+  width: 80%;
+  margin-left: 305px;
+  margin-top: 70px;
+  margin-bottom: 50px;
+  padding: 10px 0px 0px 20px;
+  background-color: white;
+  word-wrap: break-word; }
+
+.post-title a {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500; }
+  .post-title a:hover {
+    text-decoration: inherit;
+    color: #333; }
+  .post-title a:visited {
+    text-decoration: inherit;
+    color: #333; }
+.post-title h1 {
+  font-weight: bold; }
+
+.any-link {
+  color: #1ac2c4;
+  text-decoration: none;
+  font-weight: 500; }
+  .any-link:visited {
+    color: #1ac2c4;
+    text-decoration: none;
+    font-weight: 500; }
+  .any-link:hover {
+    color: #333;
+    text-decoration: none;
+    font-weight: 500; }
+
+.post-details {
+  padding: 10px 0px 10px 10px; }
+  .post-details span {
+    color: #8c8c8c;
+    font-weight: 500; }
+
+.footer {
+  height: 100px;
+  width: 80%;
+  margin-left: 305px;
+  padding: 10px;
+  background-color: white;
+  word-wrap: break-word; }
+
+hr.dash {
+  border-top: dashed;
+  border-color: #c1c1c1;
+  border-width: 1px 0 0 0;
+  border-radius: 20px; }
+
+.page-name {
+  color: #333;
+  font-weight: bold; }
+
+.small-nav .collapsed-icon {
+  text-align: right; }
+.small-nav h3 {
+  display: inline-block; }
+
+.collapsed li {
+  display: inline;
+  margin-right: 10px;
+  padding: 5px; }
+
+/*# sourceMappingURL=style.css.map */

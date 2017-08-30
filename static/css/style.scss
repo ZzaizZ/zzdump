@@ -1,0 +1,168 @@
+@import url("https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+// colours
+$light-gray: #c1c1c1;
+$soft-gray: #8c8c8c;
+$bg-gray: #FAFAFA;
+$dark-gray: #333;
+$light-green: #1ac2c4;
+
+// margins
+$left-ui-margin: 20px;
+$top-margin: 70px;
+
+//sizes
+$ui-width: 270px;
+$ui-height: 400px;
+$ui-ava-height: 250px;
+
+#main {
+	background-color: $bg-gray;
+}
+
+.tabs {
+	box-shadow: 0 0 25px rgba(122,122,122,0.5);
+}
+
+.user-info-fixed {	
+	width: $ui-width;
+	height: $ui-height;
+	position: fixed;
+	margin-left: $left-ui-margin;
+	margin-top: $top-margin;
+	background-color: white;	
+
+	h4 {
+		text-align: center;
+		font-weight: bold;
+	}
+
+	p {
+		text-align: center;
+		vertical-align: middle;
+		color: $light-gray;
+	}
+
+	ul.user-social {
+		text-align: center;
+		margin: 0px;
+		padding: 4px;
+	}
+
+	li {
+		display: inline;
+		margin-right: 10px;
+		padding: 5px;
+
+		.fa-github {
+			color: #333333;
+		}
+
+		.fa-github:hover {
+			text-shadow: 0px 2px 5px;
+		}
+
+		.fa-vk:hover {
+			text-shadow: 0px 2px 5px;	
+		}
+	}
+}
+
+.user-ava {
+	width: $ui-width;
+	height: $ui-ava-height;
+}
+
+.content {
+	height: 3000px;
+	width: 80%;
+	margin-left: $left-ui-margin + $ui-width + 15px;
+	margin-top: $top-margin;
+	margin-bottom: 50px;
+	padding: 10px 0px 0px 20px;
+	background-color: white;
+	word-wrap: break-word;	
+}
+
+.post-title {	
+	a {
+		color: $dark-gray;
+		text-decoration: none;
+		font-weight: 500;
+		&:hover {			
+			text-decoration: inherit;
+			color: $dark-gray;
+		}
+		&:visited {
+			text-decoration: inherit;
+			color: $dark-gray;
+		}
+	}
+	h1 {
+		font-weight: bold;
+	}
+}
+
+.any-link {
+	color: $light-green;
+	text-decoration: none;
+	font-weight: 500;
+	&:visited {
+		color: $light-green;
+		text-decoration: none;
+		font-weight: 500;
+	}
+	&:hover {
+		color: $dark-gray;
+		text-decoration: none;
+		font-weight: 500;
+	}
+}
+
+.post-details {
+	span {
+		color: $soft-gray;
+		font-weight: 500;
+	}
+	padding: 10px 0px 10px 10px;
+}
+
+.footer {
+	height: 100px;
+	width: 80%;	
+	margin-left: $left-ui-margin + $ui-width + 15px;
+	padding: 10px;
+	background-color: white;
+	word-wrap: break-word;
+}
+
+hr.dash {
+	border-top: dashed;
+	border-color: $light-gray; 
+	border-width: 1px 0 0 0; 
+	border-radius: 20px;
+}
+
+.page-name {
+	color: $dark-gray;
+	font-weight: bold;
+}
+
+.small-nav {
+	.collapsed-icon {
+		text-align: right;
+	}
+
+	h3 {
+		display: inline-block;
+	}
+}
+.collapsed {
+
+	li {
+		display: inline;
+		margin-right: 10px;
+		padding: 5px;
+	}
+	
+}
